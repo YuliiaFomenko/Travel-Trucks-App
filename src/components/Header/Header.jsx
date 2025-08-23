@@ -10,7 +10,7 @@ const Header = () => {
   }
 
   return (
-    <div className={s.header}>
+    <div className={clsx('container', s.header)}>
       <Link to="/">
         <svg width="136" height="15">
           <use href={`${sprite}#icon-Logo`} />

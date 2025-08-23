@@ -40,6 +40,7 @@ body {
   background-color: var(--white);
   color: var(--main);
   height: 100%;
+  overflow: hidden;
 }
 
 h1,
@@ -66,4 +67,10 @@ img {
 
 a {
   text-decoration: none;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 64px;
+  margin: 0 auto;
 }
