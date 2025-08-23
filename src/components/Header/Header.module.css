@@ -1,0 +1,29 @@
+.header {
+display: flex;
+align-items: center;
+border-bottom: 1px solid var(--badges);
+padding: 24px 64px;
+width: 1440px;
+height: 72px;
+position: relative;
+}
+
+.nav {
+  display: flex;
+  gap: 32px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.link {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  text-align: center;
+  color: #101828;
+}
+
+.active {
+  color: #d84343;
+}
