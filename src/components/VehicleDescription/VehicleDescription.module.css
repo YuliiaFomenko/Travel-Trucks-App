@@ -1,0 +1,15 @@
+.text {
+  display: inline-block;
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: var(--text);
+
+white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
+
+display: block;     /* щоб зайняв всю ширину */
+  max-width: 100%; 
+}

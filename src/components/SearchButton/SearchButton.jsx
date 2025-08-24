@@ -1,8 +1,11 @@
 import React from 'react'
+import s from './SearchButton.module.css'
 
 const SearchButton = () => {
   return (
-    <div>SearchButton</div>
+    <div>
+      <button className={s.button}>Search</button>
+    </div>
   )
 }
 
