@@ -1,0 +1,47 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 48px;
+  margin-bottom: 40px;
+}
+
+.label {
+  font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: var(--gray);
+}
+
+.inputWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.input {
+  width: 360px;
+padding-left: 48px;
+padding-top: 16px;
+padding-bottom: 16px;
+padding-right: 16px;
+height: 56px;
+border-radius: 12px;
+border: none;
+
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: var(--main);
+
+background: var(--inputs);
+}
+
+.icon {
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  pointer-events: none;
+}

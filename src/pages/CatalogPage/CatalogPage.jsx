@@ -1,8 +1,11 @@
 import React from 'react'
+import Sidebar from '../../components/Sidebar/Sidebar'
 
 const CatalogPage = () => {
   return (
-    <div>CatalogPage</div>
+    <div>
+      <Sidebar/>
+    </div>
   )
 }
 
