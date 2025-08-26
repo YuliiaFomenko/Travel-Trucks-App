@@ -7,7 +7,7 @@ const VehicleHeader = ({name, price}) => {
     <div className={s.header}>
       <h3 className={s.name}>{name}</h3>
       <div className={s.priceWrapper}>
-        <span className={s.price}>€{price}</span>
+        <span className={s.price}>€{price.toFixed(2)}</span>
         <button className={s.favBtn}>
           <svg className={s.favIcon} width="26" height="24">
             <use href={`${sprite}#icon-Property-1Default`}/>

@@ -1,10 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import s from './VehicleTypeFilter.module.css'
 import sprite from '../../assets/sprite.svg'
+import { useDispatch, useSelector } from 'react-redux'
+import { selectFilters } from '../../redux/filters/selectors'
+import { setVehicleType } from '../../redux/filters/slice'
 
 const VehicleTypeFilter = () => {
 
-  const [active, setActive] = useState(null);
+  const dispatch = useDispatch();
+  const {vehicleType} = useSelector(selectFilters);
 
   const options = [
     {id: 'van', label: 'Van', icon: 'icon-bi_grid-1x2'},
@@ -20,8 +24,8 @@ const VehicleTypeFilter = () => {
         {options.map((option) => (
           <button
             key={option.id}
-            className={`${s.option} ${active === option.id ? s.active : ""}`}
-            onClick={() => setActive(option.id)}
+            className={`${s.option} ${vehicleType === option.id ? s.active : ""}`}
+            onClick={() => dispatch(setVehicleType(option.id))}
           >
             <svg width="32" height="32">
               <use href={`${sprite}#${option.icon}`} />

@@ -1,9 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 import s from './VehicleEquipmentFilter.module.css'
 import sprite from '../../assets/sprite.svg'
+import { useDispatch, useSelector } from 'react-redux'
+import { selectFilters } from '../../redux/filters/selectors'
+import { toggleEquipment } from '../../redux/filters/slice'
 
 const VehicleEquipmentFilter = () => {
-  const [activeOption, setActiveOption] = useState([]);
+
+  const dispatch = useDispatch();
+  const {equipment} = useSelector(selectFilters);
 
   const options = [
     { id: "ac", label: "AC", icon: "icon-wind" },
@@ -13,14 +18,6 @@ const VehicleEquipmentFilter = () => {
     { id: "bathroom", label: "Bathroom", icon: "icon-ph_shower" },
   ];
 
-  const toggleOption = (id) => {
-    if (activeOption.includes(id)) {
-      setActiveOption(activeOption.filter(optionId => optionId !== id ));
-    } else {
-      setActiveOption([...activeOption, id]);
-    }
-  }
-
   return (
     <div className={s.wrapper}>
       <h2 className={s.title}>Vehicle equipment</h2>
@@ -29,8 +26,8 @@ const VehicleEquipmentFilter = () => {
         {options.map((option) => (
           <button
             key={option.id}
-            className={`${s.option} ${activeOption.includes(option.id) ? s.active : ""}`}
-            onClick={() => toggleOption(option.id)}
+            className={`${s.option} ${equipment[option.id] ? s.active : ""}`}
+            onClick={() => dispatch(toggleEquipment(option.id))}
           >
             <svg width="32" height="32">
               <use href={`${sprite}#${option.icon}`} />
