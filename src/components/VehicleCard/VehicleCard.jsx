@@ -27,7 +27,7 @@ const VehicleCard = ({vehicle}) => {
     <div className={s.card}>
       <VehicleImage src={mainImage} alt={vehicle.name}/>
       <div className={s.content}>
-        <VehicleHeader name={vehicle.name} price={vehicle.price}/>
+        <VehicleHeader name={vehicle.name} price={vehicle.price} id={vehicle.id}/>
         <VehicleInfo rating={vehicle.rating} reviewsCount={vehicle.reviews.length} location={vehicle.location}/>
         <VehicleDescription text={vehicle.description}/>
         <VehicleFeatures features={features}/>

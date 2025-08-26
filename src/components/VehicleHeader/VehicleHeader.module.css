@@ -29,4 +29,14 @@ color: var(--main);
 
 .favBtn {
   display: block;
+  cursor: pointer;
+}
+
+.favIcon {
+  fill: var(--main);
+  transition: fill 0.3s ease;
+}
+
+.active .favIcon {
+  fill: var(--button);
 }

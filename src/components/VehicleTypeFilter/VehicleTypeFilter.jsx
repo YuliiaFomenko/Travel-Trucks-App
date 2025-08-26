@@ -4,6 +4,7 @@ import sprite from '../../assets/sprite.svg'
 import { useDispatch, useSelector } from 'react-redux'
 import { selectFilters } from '../../redux/filters/selectors'
 import { setVehicleType } from '../../redux/filters/slice'
+import clsx from 'clsx'
 
 const VehicleTypeFilter = () => {
 
@@ -24,7 +25,7 @@ const VehicleTypeFilter = () => {
         {options.map((option) => (
           <button
             key={option.id}
-            className={`${s.option} ${vehicleType === option.id ? s.active : ""}`}
+            className={clsx(s.option, vehicleType === option.id && s.active)}
             onClick={() => dispatch(setVehicleType(option.id))}
           >
             <svg width="32" height="32">
