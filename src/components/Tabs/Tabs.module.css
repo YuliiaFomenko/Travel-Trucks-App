@@ -1,0 +1,27 @@
+.tabs {
+display: flex;
+gap: 40px;
+margin-bottom: 24px;
+}
+
+.tab {
+font-family: var(--font-family);
+font-weight: 600;
+font-size: 20px;
+line-height: 120%;
+color: var(--main);
+}
+
+.active {
+text-decoration: underline;
+text-decoration-color: var(--button);
+text-decoration-thickness: 5px;
+text-underline-offset: 28px;
+}
+
+.divider {
+border: none;
+height: 1px;
+background-color: var(--gray-light);
+margin-bottom: 44px;
+}

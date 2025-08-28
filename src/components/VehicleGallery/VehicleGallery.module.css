@@ -1,0 +1,21 @@
+.galleryList {
+  display: flex;
+  gap: 48px;
+  align-items: stretch; 
+  margin-bottom: 28px;
+}
+
+.galleryItem {
+  width: 292px;
+  aspect-ratio: 292 / 312; 
+  flex-shrink: 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}

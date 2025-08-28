@@ -1,0 +1,35 @@
+.title {
+  font-family: var(--font-family);
+font-weight: 600;
+font-size: 20px;
+line-height: 120%;
+color: var(--main);
+margin-bottom: 24px;
+}
+
+.divider {
+   border: none;
+  height: 1px;
+  background-color: var(--gray-light);
+  margin-bottom: 24px;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.key, .value {
+  font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+text-align: center;
+color: var(--main);
+}

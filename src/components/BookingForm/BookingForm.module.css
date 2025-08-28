@@ -1,0 +1,83 @@
+.form {
+display: flex;
+flex-direction: column;
+border: 1px solid var(--gray-light);
+border-radius: 10px;
+padding: 44px;
+width: 641px;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.title {
+  font-family: var(--font-family);
+font-weight: 600;
+font-size: 20px;
+line-height: 120%;
+color: var(--main);
+}
+
+.subtitle {
+  font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: var(--gray);
+}
+
+.fieldsWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.field {
+  border: none;
+  border-radius: 12px;
+padding: 18px;
+width: 527px;
+height: 60px;
+background: var(--inputs);
+
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 16px;
+line-height: 150%;
+color: var(--gray);
+}
+
+.textarea {
+  height: 118px;
+  padding: 16px;
+  resize: none;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+
+  border-radius: 200px;
+padding: 16px;
+width: 166px;
+height: 56px;
+background: var(--button);
+font-family: var(--font-family);
+font-weight: 500;
+font-size: 16px;
+line-height: 150%;
+letter-spacing: -0.01em;
+color: var(--white);
+}
+
+.error {
+  color: var(--button);
+  font-weight: 400;
+font-size: 14px;
+}

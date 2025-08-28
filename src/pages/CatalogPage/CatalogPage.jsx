@@ -7,6 +7,7 @@ import { fetchCampers } from '../../redux/campers/operations'
 import s from './CatalogPage.module.css'
 import { selectLimit, selectPage } from '../../redux/filters/selectors'
 import { setPage } from '../../redux/filters/slice'
+import { clearCampers } from '../../redux/campers/slice'
 
 
 const CatalogPage = () => {
@@ -20,6 +21,7 @@ const CatalogPage = () => {
   const limit = useSelector(selectLimit);
 
   useEffect(() => {
+    dispatch(clearCampers())
     dispatch(setPage(1))
     dispatch(fetchCampers({replace: true, page: 1, limit}))
   }, [dispatch, limit]);

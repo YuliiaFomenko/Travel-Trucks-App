@@ -5,14 +5,14 @@ import LoadMoreButton from '../LoadMoreButton/LoadMoreButton'
 
 const VehicleList = ({ vehicles, showLoadMore, onLoadMore, isLoadingMore }) => {
   return (
-    <div className={s.list}>
+    <ul className={s.list}>
       {vehicles.map((vehicle) => (
-        <VehicleCard key={vehicle.id} vehicle={vehicle} />
+        <li key={vehicle.id}>
+          <VehicleCard vehicle={vehicle} />
+        </li>
       ))}
-      {showLoadMore && (
-      <LoadMoreButton onClick={onLoadMore} isLoading={isLoadingMore} />
-    )}
-    </div>
+      {showLoadMore && <LoadMoreButton onClick={onLoadMore} isLoading={isLoadingMore} />}
+    </ul>
   );
 };
 
