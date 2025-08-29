@@ -2,3 +2,11 @@
   display: flex;
   gap: 64px;
 }
+
+.emptyMessage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex: 1; 
+}
