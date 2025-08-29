@@ -27,20 +27,24 @@ The goal of the project is to create a modern and user-friendly interface where 
 ## Installation
 
 1. Clone the repository:
-  ```bash
-  git clone https://github.com/YuliiaFomenko/Travel-Trucks-App.git
+      ```bash
+      git clone https://github.com/YuliiaFomenko/Travel-Trucks-App.git
+      ```
 
 2. Navigate to the project folder:
-  ```bash
-  cd Travel-Trucks-App
+      ```bash
+      cd Travel-Trucks-App
+      ```
 
 3. Install dependencies:
-  ```bash
-  npm install
+      ```bash
+      npm install
+      ```
 
 4. Run locally:
-  ```bash
-  npm run dev
+      ```bash
+      npm run dev
+      ```
 
 5. Open in browser:
     http://localhost:5173
