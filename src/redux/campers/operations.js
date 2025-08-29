@@ -14,11 +14,16 @@ export const fetchCampers = createAsyncThunk('campers/fetchAll',
 
     const response = await axios.get(`/campers?page=${arg.page}&limit=${arg.limit}&${query}`);
 
-    const items = response.data.items;
-    const total = response.data.total;
+    const items = response.data.items || [];
+    const total = response.data.total || 0;
 
     return {items, total, replace: arg.replace};
   } catch (error) {
+
+    if (error.response && error.response.status === 404){
+      return {items: [], total: 0, replace: arg.replace}
+    }
+
     return thunkAPI.rejectWithValue(error.message)
   }
 })
