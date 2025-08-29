@@ -1,12 +1,49 @@
-# React + Vite
+# 🚐 TravelTrucks Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Project Description
+**TravelTrucks** is the frontend part of a web application for a company that rents campervans.  
+The goal of the project is to create a modern and user-friendly interface where users can browse the camper catalog, view detailed information about each camper model, read reviews, and make bookings.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Home Page** – company presentation with key offerings.  
+- **Camper Catalog** – list of all available camper models with photos, prices, and short descriptions.  
+- **Single Camper Page** – detailed information about the selected camper, including specifications, reviews, and a booking form.  
+- **Filters & Search** – filtering campers by type, equipment, and location.  
+- **Pagination / Load More** – additional campers are loaded on scroll or via the “Load More” button.  
+- **Booking Form** – users can book a camper with a success notification after submission.   
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Technologies
+- **React** with Hooks
+- **React Router** for navigation
+- **Formik + Yup** for forms and validation
+- **React DatePicker** for booking dates
+- **React Hot Toast** for notifications
+- **CSS Modules / clsx** for styling
+
+## Installation
+
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/YuliiaFomenko/Travel-Trucks-App.git
+
+2. Navigate to the project folder:
+    cd Travel-Trucks-App
+
+3. Install dependencies:
+    npm install
+
+4. Run locally:
+    npm run dev
+
+5. Open in browser:
+    http://localhost:5173
+
+
+## Author
+👩‍💻 Developed by Yuliia Fomenko
+📧 Contact: yaulia3@gmail.com
+🔗 GitHub: https://github.com/YuliiaFomenko
