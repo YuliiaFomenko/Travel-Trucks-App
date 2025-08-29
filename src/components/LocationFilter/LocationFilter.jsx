@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import sprite from '../../assets/sprite.svg'
 import s from './LocationFilter.module.css'
 import { useDispatch, useSelector } from 'react-redux'
@@ -10,9 +10,39 @@ const LocationFilter = () => {
 
   const dispatch = useDispatch();
   const {location} = useSelector(selectFilters)
+  const [error, setError] = useState('')
 
-  const handleChange = (e) => {
-    dispatch(setLocation(e.target.value))
+  const handleChange = async (e) => {
+
+    const value = e.target.value;
+    setError('')
+
+    dispatch(setLocation(value))
+
+    if (value.length > 0 && value.length < 2) {
+      setError('City name is too short')
+    }
+
+
+    if (value.length >= 2){
+      try {
+        const response = await fetch(`https://66b1f8e71ca8ad33d4f5f63e.mockapi.io/campers?location=${encodeURIComponent(value)}`);
+
+        if (!response.ok) {
+          throw new Error("City not found");
+        }
+
+        const data = await response.json();
+
+        if (data.length === 0){
+          throw new Error("City not found");
+        }
+
+        setError('')
+      } catch (err) {
+        setError(err.message)
+      }
+    }
   }
 
   return (
@@ -32,6 +62,7 @@ const LocationFilter = () => {
           <use href={`${sprite}#icon-Map`} />
         </svg>
       </div>
+      {error && <div className={s.error}>{error}</div>}
     </div>
   );
 }

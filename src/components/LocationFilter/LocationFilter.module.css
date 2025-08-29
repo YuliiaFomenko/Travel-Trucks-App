@@ -45,3 +45,11 @@ background: var(--inputs);
   transform: translateY(-50%);
   pointer-events: none;
 }
+
+.error {
+  color: #ff4d4f;
+  font-size: 14px;
+  margin-top: 1px; 
+  font-weight: 500;
+  font-family: var(--font-family);
+}

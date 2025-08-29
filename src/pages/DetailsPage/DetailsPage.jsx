@@ -13,6 +13,7 @@ import FeaturesTab from '../../components/FeaturesTab/FeaturesTab';
 import ReviewsTab from '../../components/ReviewsTab/ReviewsTab';
 import BookingForm from '../../components/BookingForm/BookingForm';
 import clsx from 'clsx';
+import Loader from '../../components/Loader/Loader';
 
 const DetailsPage = () => {
 
@@ -33,7 +34,14 @@ const DetailsPage = () => {
     }
   }, [id, dispatch])
 
-  if (isLoading) return <p>Loading...</p>
+  if (isLoading) {
+    return (
+      <div style={{ display: "flex", justifyContent: "center", alignItems: "center", height: "100vh" }}>
+        <Loader size={60} />
+      </div>
+    );
+  }
+
   if (!camper) return <p>No camper found</p>
 
   return (

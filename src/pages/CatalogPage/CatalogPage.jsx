@@ -8,6 +8,7 @@ import s from './CatalogPage.module.css'
 import { selectLimit, selectPage } from '../../redux/filters/selectors'
 import { setPage } from '../../redux/filters/slice'
 import { clearCampers } from '../../redux/campers/slice'
+import Loader from '../../components/Loader/Loader'
 
 
 const CatalogPage = () => {
@@ -43,7 +44,11 @@ const CatalogPage = () => {
   }
 
   if (isLoading && campers.length === 0) {
-    return <div>Loading...</div>;
+    return (
+      <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh'}}>
+        <Loader size={60}/>
+      </div>
+    )
   }
 
   if (error) {
